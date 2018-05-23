@@ -7,7 +7,7 @@ import Foundation
 
 // INPUT
 // Global variable to use later in program
-var photoArrangementsToBeConsidered = 3
+var arrangements = 0
 
 while true {
     print("How many photo arrangements will be considered?")
@@ -20,7 +20,7 @@ while true {
     if integerInput < 1 || integerInput > 10 {
         continue
     }
-    photoArrangementsToBeConsidered = integerInput
+    arrangements = integerInput
     break
 }
 // PROCESS
@@ -28,9 +28,8 @@ while true {
 // Some output may be given here if you desire
 
 // Example of how to collect multiple input lines
-print("How many pictures in photo arrangement #\(photoArrangementsToBeConsidered)?")
-for _ in 1...photoArrangementsToBeConsidered {
-    
+for i in 1...arrangements {
+    print("How many pictures in photo arrangement #\(i)?")
     // Get the input (use guard-let to guarantee it is not nil)
     // and then print it out
     guard let givenInput = readLine() else {
